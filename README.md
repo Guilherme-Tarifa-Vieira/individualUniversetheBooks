@@ -1,2 +1,2 @@
 # individualUniversetheBooks
-site institucional, individual, fins educativos
+site institucional, individual para fins educativos.
