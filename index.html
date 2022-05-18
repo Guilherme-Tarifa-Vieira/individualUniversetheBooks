@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Universe of Books</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="navBar">
+      <h1>Un<span>Book</span></h1>
+      <ul class="navLista">
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Descobrir</a></li>
+        <li><a href="#">Livros</a></li>
+      </ul>
+      <div class="caLogin">
+        <p>Login</p>
+        <p>Cadastro</p>
+      </div>
+    </div>
+    <div class="content">
+      <div class="banner">
+        <div class="text1">
+          <h1 class="title">
+            &quot;Um leitor vive mil vidas antes de morrer. O homem que nunca lê
+            vive apenas uma.&quot;
+          </h1>
+          <p class="paragraph">George R. R. Martin</p>
+          <div class="mouseScroll">
+            <img src="/assets/img/mouse-scroll-wheel-svgrepo-com.svg" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PARTE-2 -->
+    <div class="content2">
+      <div class="imgBox">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="assets/img/oPequenoPrincipe.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/hamletWilliam.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/buscaDoTempoPerdido.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/harry1.webp" />
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/oIluminado.webp" />
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/divinaComedia.webp" />
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/oHobbit.webp" />
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/croNarnia.webp" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper('.mySwiper', {
+        effect: 'coverflow',
+        grabCursor: false,
+        centeredSlides: true,
+        slidesPerView: '4',
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 0,
+          depth: 200,
+          modifier: 1,
+          slideShadows: false
+        },
+        pagination: { el: '.swiper-pagination', clickable: true },
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false
+        },
+        keyboard: { enable: true },
+
+        navigation: { elnextEl: '.swiper-button-next' },
+        loop: true
+      })
+    </script>
+  </body>
+</html>
