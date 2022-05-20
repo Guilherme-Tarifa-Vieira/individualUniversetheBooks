@@ -1,16 +1,39 @@
 /* FONTES */
+/* poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800;1,900&display=swap');
+
+/* garamond */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800;1,900&display=swap');
 
 /* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'garamond', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--fuschia);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--void);
 }
 
 /* VARIAVEIS CORES */
 :root {
   --void: #0e0b16;
+  --void2: #302a3f;
   --fuschia: #a239ca;
   --jewel: #4717f6;
   --stark: #f2ebea;
@@ -26,7 +49,7 @@ content {
   margin-left: 10%;
 }
 
-.navBar {
+#header {
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -35,16 +58,22 @@ content {
   position: fixed;
   z-index: 100;
   color: var(--stark);
+  transition: 0.7s;
 }
 
-.navBar span {
+#header .title {
+  font-weight: 600;
+  font-size: 32px;
+}
+
+#header span {
   color: var(--fuschia);
 }
 
 .navLista {
   display: flex;
   justify-content: space-around;
-
+  font-weight: 400;
   padding: 0;
   width: 200px;
   list-style-type: none;
@@ -69,11 +98,11 @@ content {
 }
 .mouseScroll {
   position: relative;
-  top: 200px;
-  left: 230px;
+  top: 180px;
+  left: 210px;
 }
 .mouseScroll img {
-  height: 50px;
+  height: 40px;
   animation: float 6s ease-in-out infinite;
 }
 
@@ -100,10 +129,9 @@ content {
 
 .text1 p {
   width: 9.5rem;
-
   animation: type 4s steps(40, end);
-
   animation-fill-mode: forwards;
+  font-style: italic;
 }
 
 @keyframes type {
@@ -125,7 +153,7 @@ content {
   }
 
   50% {
-    transform: translatey(-20px);
+    transform: translatey(-10px);
   }
 }
 
@@ -153,14 +181,77 @@ content {
   width: 80%;
   margin-left: 10%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
+  flex-direction: column;
 }
 
 .content2 .imgBox img {
   max-width: 150px;
 }
 
-/* SWIPER */
+.escrito1 {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 50px;
+}
+
+.escrito1 .title {
+  color: var(--stark);
+  width: 350px;
+  font-size: 36px;
+}
+.escrito1 .title span {
+  color: var(--fuschia);
+}
+
+.imgBox2 {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+.hog img {
+  height: 300px;
+  border-radius: 5px;
+}
+
+.escrito2 p {
+  width: 300px;
+  color: var(--stark);
+  font-size: 26px;
+}
+.escrito2 p span {
+  color: var(--fuschia);
+  font-weight: 600;
+}
+
+.content3 {
+  min-height: 100vh;
+  background-color: var(--void);
+  display: flex;
+}
+
+.imgBox3 {
+  margin-top: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.escrito3 p {
+  width: 320px;
+  color: var(--stark);
+  font-size: 26px;
+}
+.escrito3 p span {
+  color: var(--fuschia);
+  font-weight: 600;
+}
+
+.leitura img {
+  height: 350px;
+  border-radius: 5px;
+}
+
+/* SWIPER1*/
 
 .swiper {
   margin-top: 25px;
@@ -176,4 +267,34 @@ content {
   height: 300px;
   display: flex;
   justify-content: center;
+}
+
+/* SWIPER2*/
+
+.swiper2 {
+  width: 240px;
+  height: 320px;
+  background-color: #4717f6;
+}
+
+.swiper-slide2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+}
+
+#header.scroll {
+  background-color: var(--void2);
+}
+
+.footer {
+  width: 100%;
+  height: 5rem;
+  background-color: var(--jewel);
+  color: white;
+  text-align: center;
 }
